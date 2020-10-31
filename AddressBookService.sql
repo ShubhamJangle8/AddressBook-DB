@@ -19,3 +19,10 @@ create table address_book(
 	primary key(fname, lname)
 );
 describe address_book;
+
+#UC3
+insert into address_book (fname, lname, address, city, zip, phone, email) VALUES
+('Shubham', 'Jangale', 'Jail Road', 'Nashik', 422101, 9987646236, 'shu@gmail.com'),
+('Rohan', 'Patil', 'x road', 'Mumbai', 411110, 9999999999, 'rohan@gmail.com'),
+('Aditya', 'Kharade', 'y road', 'Akola', 455550, 8888888888, 'aditya@gmail.com');
+select * from address_book;
