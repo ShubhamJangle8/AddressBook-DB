@@ -39,3 +39,7 @@ select * from address_book;
 #UC6
 select * from address_book where city = 'Nashik' or state = 'Maharashtra';
 select * from address_book where city = 'Mumbai' or state = 'Maharashtra';
+
+#UC7
+select count(*) from address_book where city = 'Nashik' and state = 'Maharashtra' group by city;
+select count(*) from address_book where city = 'Mumbai' and state = 'Gujrat' group by city,state;
