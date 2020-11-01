@@ -43,3 +43,12 @@ select * from address_book where city = 'Mumbai' or state = 'Maharashtra';
 #UC7
 select count(*) from address_book where city = 'Nashik' and state = 'Maharashtra' group by city;
 select count(*) from address_book where city = 'Mumbai' and state = 'Gujrat' group by city,state;
+
+#UC8
+insert into address_book (fname, lname, address, city, state, zip, phone, email) VALUES
+('Shivam', 'Jaiswal', 'a road', 'Mumbai', 'Maharashtra', 422111, 7777777777, 'shivam@gmail.com'),
+('Tushar', 'Patil', 'b road', 'Sangli', 'Gujrat', 411112, 6666666666, 'tushar@gmail.com'),
+('Sakshat', 'R', 'c road', 'Sangli', 'AP', 455880, 5555555555, 'sakshat@gmail.com');
+select * from address_book;
+select * from address_book where city = 'Mumbai' order by fname;
+select * from address_book where city = 'Sangli' order by fname;
