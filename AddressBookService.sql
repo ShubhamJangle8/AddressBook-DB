@@ -30,3 +30,8 @@ select * from address_book;
 #UC4
 update address_book set address = "Kala Nagar" where fname = "Shubham";
 select * from address_book;
+
+#UC5
+delete from address_book where fname = 'Aditya';
+select * from address_book;
+
