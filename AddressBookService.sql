@@ -26,3 +26,7 @@ insert into address_book (fname, lname, address, city, zip, phone, email) VALUES
 ('Rohan', 'Patil', 'x road', 'Mumbai', 411110, 9999999999, 'rohan@gmail.com'),
 ('Aditya', 'Kharade', 'y road', 'Akola', 455550, 8888888888, 'aditya@gmail.com');
 select * from address_book;
+
+#UC4
+update address_book set address = "Kala Nagar" where fname = "Shubham";
+select * from address_book;
