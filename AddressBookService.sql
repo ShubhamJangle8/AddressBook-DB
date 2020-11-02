@@ -52,3 +52,23 @@ insert into address_book (fname, lname, address, city, state, zip, phone, email)
 select * from address_book;
 select * from address_book where city = 'Mumbai' order by fname;
 select * from address_book where city = 'Sangli' order by fname;
+
+#UC9
+alter table address_book rename to contacts;
+describe contacts;
+alter table contacts drop primary key;
+alter table contacts
+add contact_id int not null auto_increment first,
+add primary key (contact_id);
+describe contacts;
+
+create table address_book
+(
+sr_no int not null auto_increment,
+contact_id int not null,
+addressBookName varchar(100) not null,
+type varchar(100) not null,
+primary key(sr_no),
+foreign key(contact_id) references contacts(contact_id)
+);
+describe address_book;
