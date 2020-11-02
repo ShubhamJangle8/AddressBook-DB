@@ -72,3 +72,6 @@ primary key(sr_no),
 foreign key(contact_id) references contacts(contact_id)
 );
 describe address_book;
+
+#UC10
+select type,count(*) from address_book group by type;
