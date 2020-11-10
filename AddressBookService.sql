@@ -17,7 +17,7 @@ create table address_book(
 	zip numeric(6) not null,
 	phone numeric(10) not null,
 	email nvarchar(255) not null,
-	primary key(fname, lname)
+	primary key(fname, lname) 
 );
 describe address_book;
 
@@ -64,14 +64,28 @@ describe contacts;
 
 create table address_book
 (
-sr_no int not null auto_increment,
+srNo int not null auto_increment,
 contact_id int not null,
 addressBookName varchar(100) not null,
 type varchar(100) not null,
-primary key(sr_no),
+primary key (srNo),
 foreign key(contact_id) references contacts(contact_id)
+on delete cascade
 );
 describe address_book;
 
 #UC10
 select type,count(*) from address_book group by type;
+
+#UC11
+insert into address_book (contact_id, addressbookName, type) values 
+(1, 'AddressBook1', 'family'),
+(1, 'AddressBook2', 'friend'),
+(2, 'AddressBook2','friend'), 
+(3, 'AddressBook1','family'), 
+(4, 'AddressBook1','family'),
+(5, 'AddressBook2','friend');
+
+
+
+				
